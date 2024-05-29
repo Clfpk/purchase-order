@@ -11,5 +11,4 @@ class ProductTemplate(models.Model):
     @api.depends('brand_id', 'model_id')
     def _compute_price_group(self):
         for product in self:
-            # Compute price group based on brand and model
             product.price_group_id = ...
